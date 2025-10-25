@@ -127,43 +127,149 @@
             </div>
             <div class="streaming-content">
                 <div class="streaming-info">
-                    <div class="streaming-card">
-                        <div class="streaming-icon">
-                            <i class="fas fa-broadcast-tower"></i>
-                        </div>
-                        <h3>Live Streaming</h3>
-                        <p>Join me for live gaming sessions, development streams, and interactive content.</p>
-                        <a href="#" class="stream-link">Watch Live</a>
-                    </div>
-                    <div class="streaming-card">
-                        <div class="streaming-icon">
-                            <i class="fas fa-video"></i>
-                        </div>
-                        <h3>YouTube Channel</h3>
-                        <p>Gaming Content, game reviews, and behind-the-scenes development content.</p>
-                        <a href="#" class="stream-link">Subscribe</a>
-                    </div>
-                    <div class="streaming-card">
-                        <div class="streaming-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h3>Community</h3>
-                        <p>Join our Discord community for discussions, game nights, and exclusive content.</p>
-                        <a href="#" class="stream-link">Join Discord</a>
-                    </div>
+                     <div class="streaming-card">
+                         <div class="streaming-icon">
+                             <i class="fab fa-twitch"></i>
+                         </div>
+                         <h3>Twitch</h3>
+                         <p>Live gaming sessions, development streams, and interactive content.</p>
+                         <div class="platform-stats">
+                             <span class="stat">Followers: <span id="twitch-followers">Loading...</span></span>
+                             <span class="live-status" id="twitch-status">Checking...</span>
+                         </div>
+                         <a href="https://www.twitch.tv/basicallysnail" target="_blank" class="stream-link">Watch Live</a>
+                     </div>
+                     <div class="streaming-card">
+                         <div class="streaming-icon">
+                             <i class="fab fa-youtube"></i>
+                         </div>
+                         <h3>YouTube</h3>
+                         <p>Gaming content, game reviews, and behind-the-scenes development content.</p>
+                         <div class="platform-stats">
+                             <span class="stat">Subs: <span id="youtube-subs">Loading...</span></span>
+                             <span class="stat">Views: <span id="youtube-views">Loading...</span></span>
+                             <span class="stat">Videos: <span id="youtube-videos">Loading...</span></span>
+                         </div>
+                         <a href="#" target="_blank" class="stream-link">Subscribe</a>
+                     </div>
+                     <div class="streaming-card">
+                         <div class="streaming-icon">
+                             <i class="fab fa-discord"></i>
+                         </div>
+                         <h3>Discord</h3>
+                         <p>Join our Discord community for discussions, game nights, and exclusive content.</p>
+                         <a href="https://discord.gg/6JTcjwRYgs" target="_blank" class="stream-link">Join Discord</a>
+                     </div>
+                     <div class="streaming-card">
+                         <div class="streaming-icon">
+                             <i class="fas fa-broadcast-tower"></i>
+                         </div>
+                         <h3>Kick</h3>
+                         <p>Alternative streaming platform for gaming content and community interaction.</p>
+                         <div class="platform-stats">
+                             <span class="stat">Followers: <span id="kick-followers">Loading...</span></span>
+                             <span class="live-status" id="kick-status">Checking...</span>
+                         </div>
+                         <a href="https://kick.com/basicallysnail" target="_blank" class="stream-link">Watch Live</a>
+                     </div>
+                     <div class="streaming-card">
+                         <div class="streaming-icon">
+                             <i class="fab fa-twitter"></i>
+                         </div>
+                         <h3>Twitter</h3>
+                         <p>Follow for updates, game development news, and community interaction.</p>
+                         <div class="platform-stats">
+                             <span class="stat">Followers: <span id="twitter-followers">Loading...</span></span>
+                             <span class="stat">Posts: <span id="twitter-posts">Loading...</span></span>
+                         </div>
+                         <a href="https://x.com/BasicallySnail" target="_blank" class="stream-link">Follow</a>
+                     </div>
+                     <div class="streaming-card">
+                         <div class="streaming-icon">
+                             <i class="fab fa-tiktok"></i>
+                         </div>
+                         <h3>TikTok</h3>
+                         <p>Short-form gaming content, highlights, and behind-the-scenes moments.</p>
+                         <div class="platform-stats">
+                             <span class="stat">Followers: <span id="tiktok-followers">Loading...</span></span>
+                             <span class="stat">Likes: <span id="tiktok-likes">Loading...</span></span>
+                         </div>
+                         <a href="https://www.tiktok.com/@basicallysnail" target="_blank" class="stream-link">Follow</a>
+                     </div>
+                     <div class="streaming-card">
+                         <div class="streaming-icon">
+                             <i class="fab fa-instagram"></i>
+                         </div>
+                         <h3>Instagram</h3>
+                         <p>Visual content, game screenshots, and personal updates.</p>
+                         <div class="platform-stats">
+                             <span class="stat">Followers: <span id="instagram-followers">Loading...</span></span>
+                             <span class="stat">Posts: <span id="instagram-posts">Loading...</span></span>
+                         </div>
+                         <a href="https://www.instagram.com/basicallysnail/" target="_blank" class="stream-link">Follow</a>
+                     </div>
                 </div>
                 <div class="streaming-stats">
                     <div class="stat-item">
-                        <h3>0</h3>
-                        <p>Subscribers</p>
+                        <h3 id="total-followers">0</h3>
+                        <p>Total Followers</p>
                     </div>
                     <div class="stat-item">
-                        <h3>0</h3>
-                        <p>Videos</p>
+                        <h3 id="total-videos">0</h3>
+                        <p>Total Videos</p>
                     </div>
                     <div class="stat-item">
-                        <h3>0</h3>
+                        <h3 id="total-views">0</h3>
                         <p>Total Views</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Content Section -->
+    <section id="live-content" class="live-content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Live Content & Recent Videos</h2>
+                <p>Watch my latest streams and content</p>
+            </div>
+            <div class="content-grid">
+                <div class="content-embed">
+                    <h3>Twitch Stream</h3>
+                    <div id="twitch-embed" class="embed-container">
+                        <iframe id="twitch-player" 
+                                src="https://player.twitch.tv/?channel=basicallysnail&parent=localhost&parent=127.0.0.1" 
+                                frameborder="0" 
+                                allowfullscreen="true" 
+                                scrolling="no">
+                        </iframe>
+                    </div>
+                </div>
+                <div class="content-embed">
+                    <h3>Kick Stream</h3>
+                    <div id="kick-embed" class="embed-container">
+                        <iframe id="kick-player" 
+                                src="https://kick.com/basicallysnail/embed" 
+                                frameborder="0" 
+                                allowfullscreen="true">
+                        </iframe>
+                    </div>
+                </div>
+                <div class="content-embed">
+                    <h3>Latest YouTube Video</h3>
+                    <div id="youtube-embed" class="embed-container">
+                        <div id="latest-video-placeholder">
+                            <p>Loading latest video...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-embed">
+                    <h3>Recent TikTok</h3>
+                    <div id="tiktok-embed" class="embed-container">
+                        <div id="latest-tiktok-placeholder">
+                            <p>Loading recent TikTok...</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -272,12 +378,15 @@
                 <div class="footer-section">
                     <h3>Snail Studios</h3>
                     <p>Creating amazing gaming experiences and content.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-discord"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                    </div>
+                     <div class="social-links">
+                         <a href="https://x.com/BasicallySnail" target="_blank"><i class="fab fa-twitter"></i></a>
+                         <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                         <a href="https://discord.gg/6JTcjwRYgs" target="_blank"><i class="fab fa-discord"></i></a>
+                         <a href="https://www.twitch.tv/basicallysnail" target="_blank"><i class="fab fa-twitch"></i></a>
+                         <a href="https://kick.com/basicallysnail" target="_blank"><i class="fas fa-broadcast-tower"></i></a>
+                         <a href="https://www.tiktok.com/@basicallysnail" target="_blank"><i class="fab fa-tiktok"></i></a>
+                         <a href="https://www.instagram.com/basicallysnail/" target="_blank"><i class="fab fa-instagram"></i></a>
+                     </div>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
@@ -288,15 +397,18 @@
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Content</h4>
-                    <ul>
-                        <li><a href="#">YouTube</a></li>
-                        <li><a href="#">Twitch</a></li>
-                        <li><a href="#">Discord</a></li>
-                        <li><a href="#">Kick</a></li>
-                    </ul>
-                </div>
+                 <div class="footer-section">
+                     <h4>Content</h4>
+                     <ul>
+                         <li><a href="#" target="_blank">YouTube</a></li>
+                         <li><a href="https://www.twitch.tv/basicallysnail" target="_blank">Twitch</a></li>
+                         <li><a href="https://discord.gg/6JTcjwRYgs" target="_blank">Discord</a></li>
+                         <li><a href="https://kick.com/basicallysnail" target="_blank">Kick</a></li>
+                         <li><a href="https://x.com/BasicallySnail" target="_blank">Twitter</a></li>
+                         <li><a href="https://www.tiktok.com/@basicallysnail" target="_blank">TikTok</a></li>
+                         <li><a href="https://www.instagram.com/basicallysnail/" target="_blank">Instagram</a></li>
+                     </ul>
+                 </div>
                 <div class="footer-section">
                     <h4>Contact</h4>
                     <p>Snail@snailstudios.com</p>
@@ -310,5 +422,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="api-integrations.js"></script>
 </body>
 </html>

@@ -259,3 +259,58 @@ scrollToTopBtn.addEventListener('mouseleave', () => {
     scrollToTopBtn.style.transform = 'scale(1)';
     scrollToTopBtn.style.background = 'var(--primary-green)';
 });
+
+// Social Media Platform Status Updates
+function updatePlatformStatus() {
+    // This function will be called by the API integration
+    console.log('Updating platform status...');
+}
+
+// Live Stream Embed Management
+function initializeStreamEmbeds() {
+    // Twitch embed
+    const twitchPlayer = document.getElementById('twitch-player');
+    if (twitchPlayer) {
+        // Update the parent domains for Twitch embed
+        const currentDomain = window.location.hostname;
+        twitchPlayer.src = `https://player.twitch.tv/?channel=basicallysnail&parent=${currentDomain}`;
+    }
+    
+    // Kick embed
+    const kickPlayer = document.getElementById('kick-player');
+    if (kickPlayer) {
+        // Kick embed should work without domain restrictions
+        kickPlayer.src = 'https://kick.com/basicallysnail/embed';
+    }
+}
+
+// Initialize stream embeds when page loads
+document.addEventListener('DOMContentLoaded', () => {
+    initializeStreamEmbeds();
+});
+
+// Platform-specific link handlers
+document.addEventListener('DOMContentLoaded', () => {
+    // Add click tracking for social media links
+    const socialLinks = document.querySelectorAll('.stream-link');
+    socialLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            const platform = e.target.closest('.streaming-card').querySelector('h3').textContent;
+            console.log(`Clicked on ${platform} link`);
+            // You can add analytics tracking here
+        });
+    });
+});
+
+// Real-time status updates
+function startStatusUpdates() {
+    // Update status every 30 seconds
+    setInterval(() => {
+        updatePlatformStatus();
+    }, 30000);
+}
+
+// Start status updates when page loads
+document.addEventListener('DOMContentLoaded', () => {
+    startStatusUpdates();
+});
